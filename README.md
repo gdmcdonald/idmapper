@@ -5,6 +5,12 @@ tag identifier columns, link records that share an identifier, and collapse
 everything into a single master ID per real-world entity (e.g. person,
 project).
 
+## Installation
+
+```r
+remotes::install_github("gdmcdonald/idmapper")
+```
+
 ## Usage
 
 ```r

@@ -14,11 +14,11 @@ init_id_envs(c("person", "project"))
 
 dataset_a <- dataset_a %>%
   mark_id(email, graph = "person", type = "email") %>%
-  mark_id(unikey, graph = "person", type = "unikey") %>%
+  mark_id(uid, graph = "person", type = "uid") %>%
   add_to_identity_graph()
 
 dataset_b <- dataset_b %>%
-  mark_id(c(email_from_hr, email_from_irma), graph = "person", type = "email") %>%
+  mark_id(c(email_from_hr, email_from_email_list), graph = "person", type = "email") %>%
   mark_id(staff_id, graph = "person", type = "staff_id") %>%
   add_to_identity_graph()
 

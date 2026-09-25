@@ -1,0 +1,32 @@
+Package: idmapper
+Title: Entity Resolution and Identity Graphs Across Multiple Data Sources
+Version: 0.0.0.9000
+Authors@R:
+    person("Gordon", "McDonald", , "gordon.mcdonald@sydney.edu.au", role = c("aut", "cre"))
+Description: Resolve the same real-world entity (for example a person or a
+    project) as it appears under different identifiers (email address,
+    staff ID, unikey, project shortcode, and so on) across multiple,
+    separately maintained data sources. Identifier columns are tagged with
+    mark_id(), added to an undirected identity graph with
+    add_to_identity_graph() (two identifiers become linked whenever they
+    co-occur on the same row of the same dataset), and each connected
+    component of that graph is collapsed into a single master identity
+    with generate_master_identity_table(). join_master_ids() then attaches
+    the resulting master ID back onto any dataset carrying marked
+    identifier columns.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Imports:
+    dplyr (>= 1.0.0),
+    igraph,
+    magrittr,
+    purrr,
+    rlang,
+    stringr,
+    tibble,
+    tidyr
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

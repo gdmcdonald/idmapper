@@ -1,0 +1,9 @@
+pandoc: 3.8.3
+pkgdown: 2.2.1
+pkgdown_sha: ~
+articles:
+  idmapper: idmapper.html
+last_built: 2026-09-27T05:16Z
+urls:
+  reference: https://gdmcdonald.github.io/idmapper/reference
+  article: https://gdmcdonald.github.io/idmapper/articles

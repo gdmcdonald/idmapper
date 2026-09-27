@@ -1,0 +1,6 @@
+*.pper
+.DS_Store
+.Rproj.user
+/doc/
+/Meta/
+.Rhistory

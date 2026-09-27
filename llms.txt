@@ -1,5 +1,7 @@
 # idmapper
 
+📖 **[Documentation site](https://gdmcdonald.github.io/idmapper/)**
+
 Entity resolution across multiple, separately maintained data sources -
 tag identifier columns, link records that share an identifier, and
 collapse everything into a single master ID per real-world entity
@@ -13,6 +15,19 @@ remotes::install_github("gdmcdonald/idmapper")
 ```
 
 ## Usage
+
+See
+[`vignette("idmapper")`](https://gdmcdonald.github.io/idmapper/articles/idmapper.md)
+for a worked example (synthetic data) showing why this is worth the
+extra machinery over a plain `left_join()` - specifically, resolving two
+records that share no identifier directly but are linked transitively
+through a third dataset.
+
+![Diagram: three dataset panels (race_results, fitness_app_leaderboard,
+club_roster) with identifier nodes; solid lines link identifiers on the
+same row, dashed lines link identical values across datasets, showing
+club_roster bridging two different emails to one resolved
+identity.](reference/figures/identity-graph-bridge.svg)
 
 ``` r
 

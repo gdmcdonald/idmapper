@@ -76,6 +76,7 @@
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="idmapper">idmapper<a class="anchor" aria-label="anchor" href="#idmapper"></a>
 </h1></div>
+<p>📖 <strong><a href="https://gdmcdonald.github.io/idmapper/">Documentation site</a></strong></p>
 <p>Entity resolution across multiple, separately maintained data sources - tag identifier columns, link records that share an identifier, and collapse everything into a single master ID per real-world entity (e.g. person, project).</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -86,6 +87,8 @@
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
+<p>See <code><a href="articles/idmapper.html">vignette("idmapper")</a></code> for a worked example (synthetic data) showing why this is worth the extra machinery over a plain <code>left_join()</code> - specifically, resolving two records that share no identifier directly but are linked transitively through a third dataset.</p>
+<p><img src="reference/figures/identity-graph-bridge.svg" alt="Diagram: three dataset panels (race_results, fitness_app_leaderboard, club_roster) with identifier nodes; solid lines link identifiers on the same row, dashed lines link identical values across datasets, showing club_roster bridging two different emails to one resolved identity." width="100%"></p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">idmapper</span><span class="op">)</span></span>
 <span></span>

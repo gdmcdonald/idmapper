@@ -1,0 +1,57 @@
+<svg width="100%" viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="idmapper-diagram-title idmapper-diagram-desc">
+<title id="idmapper-diagram-title">How idmapper resolves identities across datasets</title>
+<desc id="idmapper-diagram-desc">Three dataset panels (race_results, fitness_app_leaderboard, club_roster) each containing identifier nodes. Solid lines link identifiers that co-occur on the same row. Dashed lines link identical identifier values across datasets, showing how club_roster bridges an email in race_results to a different email in fitness_app_leaderboard.</desc>
+
+<style>
+  .panel { fill: #F1EFE8; stroke: #5F5E5A; }
+  .chip { fill: #FAECE7; stroke: #993C1D; }
+  .title { font: 500 14px sans-serif; fill: #2C2C2A; }
+  .label { font: 500 14px sans-serif; fill: #4A1B0C; }
+  .caption { font: 400 12px sans-serif; fill: #5F5E5A; }
+  .row-edge { stroke: #B4B2A9; stroke-width: 1; }
+  .bridge { stroke: #D85A30; stroke-width: 1.2; stroke-dasharray: 4 4; }
+  @media (prefers-color-scheme: dark) {
+    .panel { fill: #2C2C2A; stroke: #B4B2A9; }
+    .chip { fill: #712B13; stroke: #F0997B; }
+    .title { fill: #F1EFE8; }
+    .label { fill: #F5C4B3; }
+    .caption { fill: #B4B2A9; }
+    .row-edge { stroke: #5F5E5A; }
+  }
+</style>
+
+<rect class="panel" x="70" y="40" width="250" height="100" rx="12" stroke-width="0.5"/>
+<text class="title" x="82" y="62">race_results</text>
+<rect class="chip" x="140" y="80" width="110" height="36" rx="8" stroke-width="0.5"/>
+<text class="label" x="195" y="102" text-anchor="middle">email</text>
+
+<rect class="panel" x="350" y="40" width="260" height="100" rx="12" stroke-width="0.5"/>
+<text class="title" x="362" y="62">fitness_app_leaderboard</text>
+<rect class="chip" x="370" y="80" width="100" height="36" rx="8" stroke-width="0.5"/>
+<text class="label" x="420" y="102" text-anchor="middle">username</text>
+<rect class="chip" x="490" y="80" width="100" height="36" rx="8" stroke-width="0.5"/>
+<text class="label" x="540" y="102" text-anchor="middle">email</text>
+<line class="row-edge" x1="470" y1="98" x2="490" y2="98"/>
+
+<rect class="panel" x="70" y="240" width="540" height="100" rx="12" stroke-width="0.5"/>
+<text class="title" x="82" y="262">club_roster</text>
+<rect class="chip" x="90" y="282" width="100" height="36" rx="8" stroke-width="0.5"/>
+<text class="label" x="140" y="304" text-anchor="middle">member_id</text>
+<rect class="chip" x="210" y="282" width="100" height="36" rx="8" stroke-width="0.5"/>
+<text class="label" x="260" y="304" text-anchor="middle">username</text>
+<rect class="chip" x="330" y="282" width="120" height="36" rx="8" stroke-width="0.5"/>
+<text class="label" x="390" y="304" text-anchor="middle">email &#183; reg</text>
+<rect class="chip" x="470" y="282" width="120" height="36" rx="8" stroke-width="0.5"/>
+<text class="label" x="530" y="304" text-anchor="middle">email &#183; app</text>
+<line class="row-edge" x1="190" y1="300" x2="210" y2="300"/>
+<line class="row-edge" x1="310" y1="300" x2="330" y2="300"/>
+<line class="row-edge" x1="450" y1="300" x2="470" y2="300"/>
+
+<line class="bridge" x1="195" y1="116" x2="390" y2="282"/>
+<line class="bridge" x1="540" y1="116" x2="530" y2="282"/>
+
+<line class="bridge" x1="82" y1="356" x2="112" y2="356"/>
+<text class="caption" x="120" y="360">= same identifier value, across datasets</text>
+
+<text class="caption" x="340" y="390" text-anchor="middle">All six identifiers shown resolve to one identity: a single runner</text>
+</svg>
